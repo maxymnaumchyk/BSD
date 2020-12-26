@@ -9,6 +9,7 @@ using MazeGrid;
 using MazeDistances;
 using MazeDistancesGrid;
 using MazeBinaryTree;
+using MazeSidewinder;
 
 namespace MazeProgram
 {
