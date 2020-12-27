@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -47,27 +48,30 @@ namespace MazeProgram
         {
             /*Grid test = new Grid(10, 10);
             test = BinaryTree.Maze(test);
-            var output = test.ToString();
+            var output = test.ToUgly();
             Console.WriteLine(output);*/
 
 
-            var distGrid = new DistanceGrid(10, 10);
-            BinaryTree.Maze(distGrid);
-            var start = distGrid[0, 0];
-            var distances = start.Distances;
-            distGrid.Distances = distances;
-            Console.WriteLine(distGrid);
+            //var distGrid = new DistanceGrid(10, 10);
+            //BinaryTree.Maze(distGrid);
+            //var start = distGrid[0, 0];
+            //var distances = start.Distances;
+            //distGrid.Distances = distances;
+            //Console.WriteLine(distGrid);
 
-            /*var longestGrid = new DistanceGrid(10, 10);
+            var longestGrid = new DistanceGrid(10, 10);
             BinaryTree.Maze(longestGrid);
+
             var start = longestGrid[0, 0];
             var distances = start.Distances;
             var (newStart, distance) = distances.Max;
             var newDistances = newStart.Distances;
             var (goal, distance2) = newDistances.Max;
             longestGrid.Distances = newDistances.PathTo(goal);
-            Console.WriteLine(longestGrid);
-            Console.WriteLine("The exit cell(and the farthest from the start) coordinates: x=" + goal.Column + " y=" + goal.Row);*/
+
+            var output = longestGrid.ToUgly(goal);
+            Console.WriteLine(output);
+            Console.WriteLine("The exit cell(and the farthest from the start) coordinates: x=" + goal.Column + " y=" + goal.Row);
         }
     }
 }

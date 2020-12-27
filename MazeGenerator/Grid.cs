@@ -110,8 +110,45 @@ namespace MazeGrid
         }
 
         //To string
+        protected virtual string ContentsOf(Cell cell)
+        {
+            return " ";
+        }
+
         public override string ToString()
         {
+            var output = new StringBuilder("+");
+            for (var i = 0; i < Columns; i++)
+            {
+                output.Append("---+");
+            }
+            output.AppendLine();
+
+            foreach (var row in Row)
+            {
+                var top = "|";
+                var bottom = "+";
+                foreach (var cell in row)
+                {
+                    var body = $" {ContentsOf(cell)} ";
+                    var east = cell.IsLinked(cell.East) ? " " : "|";
+
+                    top += body + east;
+
+                    var south = cell.IsLinked(cell.South) ? "   " : "---";
+                    const string corner = "+";
+                    bottom += south + corner;
+                }
+                output.AppendLine(top);
+                output.AppendLine(bottom);
+            }
+
+            return output.ToString();
+        }
+
+        public string ToUgly(Cell exit)
+        {
+
             var output = new StringBuilder("1");
             for (var i = 0; i < Columns; i++)
             {
@@ -125,7 +162,7 @@ namespace MazeGrid
                 var bottom = "1";
                 foreach (var cell in row)
                 {
-                    const string body = "00";
+                    var body = cell == exit ? "02" : "00";
                     var east = cell.IsLinked(cell.East) ? "0" : "1";
 
                     top += body + east;
