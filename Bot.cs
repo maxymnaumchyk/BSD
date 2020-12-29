@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Threading;
- 
+using System.Collections.Generic;
 namespace BOT
 {
     class AI
@@ -116,6 +116,29 @@ namespace BOT
         
         }
 
+        public bool MakeStep3()
+        {
+
+            Point current = maze[0, 0];
+            current.Visited = true;
+            Stack<Point> stack = new Stack<Point>();
+            do
+            {
+                int x = current.X;
+                int y = current.Y;
+                List<Point> unvisitedNeighbours = new List<Point>();
+                if (x > 0 && !maze[x - 1, y].Visited)
+                    unvisitedNeighbours.Add(maze[x - 1, y]);
+                if (x < Width - 2 && !maze[x + 1, y].Visited)
+                    unvisitedNeighbours.Add(maze[x + 1, y]);
+                if (y > 0 && !maze[x, y - 1].Visited)
+                    unvisitedNeighbours.Add(maze[x, y - 1]);
+                if (y < Height - 2 && !maze[x, y + 1].Visited)
+                    unvisitedNeighbours.Add(maze[x, y + 1]);
+
+        
+        }
+        
         public void StartBot(AI ai)
         {
             var a = true;
@@ -159,6 +182,8 @@ namespace BOT
         public int X;
         public int Y;
  
+        public bool Visited = false;
+        
         public Point Rotate(int angle)
         {
             if (angle > 0)
