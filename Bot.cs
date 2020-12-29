@@ -8,62 +8,129 @@ namespace BOT
     {
         public Robot Robot;
         public Maze Maze;
-        public Robotas Robotas;
-        public bool MakeStep()
-        {
-            //достигли выхода?
-            if (Maze[Robotas.Location] == Cell.Exit) return false;
-            //получаем значение ячейки справа
-            var left = Maze[Robotas.Location + Robotas.Direction.Rotate(1)];
-            //получаем значение ячейки слева
-            var right = Maze[Robotas.Location + Robotas.Direction.Rotate(-1)];
-            //если справа нет стены - поворачиваем направо                
-            if (left != Cell.Wall)
-                Robotas.Direction = Robotas.Direction.Rotate(1);
-            else if (right != Cell.Wall)
-                Robotas.Direction = Robotas.Direction.Rotate(-1);
-            else
-                //пока впереди есть стена - поворачиваем налево
-                while (Maze[Robotas.Location + Robotas.Direction] == Cell.Wall)
-                    Robotas.Direction = Robotas.Direction.Rotate(-1);
-
-            //идем вперед
-            Robotas.GoForward();
-            return true;
+        public Robot2 Robot2;
+        public Robot3 Robot3;
         
-        }
-        public bool MakeStepas()
+        public bool MakeStep()
         {
             //достигли выхода?
             if (Maze[Robot.Location] == Cell.Exit) return false;
             
             //получаем значение ячейки слева
-            var leftas = Maze[Robot.Location + Robot.Direction.Rotate(1)];
+            var left2 = Maze[Robot.Location + Robot.Direction.Rotate(1)];
             //если слева нет стены - поворачиваем налево
-            if (leftas != Cell.Wall)
+            if (left2 != Cell.Wall)
                 Robot.Direction = Robot.Direction.Rotate(1);
             else
-            //пока впереди есть стена - поворачиваем направо
-            while (Maze[Robot.Location + Robot.Direction] == Cell.Wall)
-                Robot.Direction = Robot.Direction.Rotate(1);
+                //пока впереди есть стена - поворачиваем направо
+                while (Maze[Robot.Location + Robot.Direction] == Cell.Wall)
+                    Robot.Direction = Robot.Direction.Rotate(-1);
             //идем вперед
             Robot.GoForward();
             return true;
         
         }
+        
+        public bool MakeStep3()
+        {
+            //достигли выхода?
+            if (Maze[Robot3.Location] == Cell.Exit) return false;
+            
+            //получаем значение ячейки слева
+            var righr3 = Maze[Robot3.Location + Robot3.Direction.Rotate(-1)];
+            //если слева нет стены - поворачиваем налево
+            if (righr3 != Cell.Wall)
+                Robot3.Direction = Robot3.Direction.Rotate(-1);
+            else
+                //пока впереди есть стена - поворачиваем направо
+                while (Maze[Robot3.Location + Robot3.Direction] == Cell.Wall)
+                    Robot3.Direction = Robot3.Direction.Rotate(1);
+            //идем вперед
+            Robot3.GoForward();
+            return true;
+        
+        }
+        public bool MakeStep2()
+        {
+            //достигли выхода?
+            if (Maze[Robot2.Location] == Cell.Exit) return false;
+            //получаем значение ячейки справа
+            var left = Maze[Robot2.Location + Robot2.Direction.Rotate(1)];
+            //получаем значение ячейки слева
+            var right = Maze[Robot2.Location + Robot2.Direction.Rotate(-1)];
+            var center = Maze[Robot2.Location + Robot2.Direction];
+            // //если справа нет стены - поворачиваем направо                
+            // if (left != Cell.Wall)
+            //     Robot2.Direction = Robot2.Direction.Rotate(1); 
+            // else if (right != Cell.Wall)
+            //     Robot2.Direction = Robot2.Direction.Rotate(-1);
+            // else
+            //     //пока впереди есть стена - поворачиваем налево
+            //
+            //tdgnsdil;tkgn
+            Random rnd = new Random();
+            int value = rnd.Next(1, 3);
+            Console.WriteLine(value);
+
+            if (right == Cell.Wall && left == Cell.Wall && center == Cell.Wall)
+            {
+                Robot2.Direction = Robot2.Direction.Rotate(-1);
+                Robot2.Direction = Robot2.Direction.Rotate(-1);
+            }
+                
+            else if (right != Cell.Wall && left != Cell.Wall)
+            {
+                if (value == 1)
+                    Robot2.Direction = Robot2.Direction.Rotate(-1);
+                else
+                    Robot2.Direction = Robot2.Direction.Rotate(1);
+            }
+            //dbjknjkgnjn;dgdl
+            else if (right != Cell.Wall && center != Cell.Wall)
+            {
+                if (value == 1)
+                    Robot2.Direction = Robot2.Direction.Rotate(-1);
+            }
+            //jl;t;tnjktgnj;stotdnxjlbk
+            else if (center != Cell.Wall && left != Cell.Wall)
+            {
+                if (value == 1)
+                    Robot2.Direction = Robot2.Direction.Rotate(1);
+            }
+            else if (right != Cell.Wall)
+                Robot2.Direction = Robot2.Direction.Rotate(-1);
+            else if (left  != Cell.Wall)
+                Robot2.Direction = Robot2.Direction.Rotate(1);
+
+            // if (Maze[Robot2.Location + Robot2.Direction] != Cell.Wall)
+            //     Robot2.GoForward();
+            // else if (right == Cell.Wall) 
+            //     Robot2.Direction = Robot2.Direction.Rotate(1);
+            // else if (left  == Cell.Wall) 
+            //     Robot2.Direction = Robot2.Direction.Rotate(-1);
+            // else if (center == Cell.Wall) 
+            //     Robot2.Direction = Robot2.Direction.Rotate(-1);
+            Robot2.GoForward();
+
+            return true;
+        
+        }
+
         public void StartBot(AI ai)
         {
             var a = true;
             var b = true;
+            var c = true;
             do
             {
-                DrawMaze(ai.Maze, ai.Robot, ai.Robotas);
+                DrawMaze(ai.Maze, ai.Robot, ai.Robot2, ai.Robot3);
                 Thread.Sleep(100);
                 a = ai.MakeStep();
-                b = ai.MakeStepas();
-            } while (a || b);
+                b = ai.MakeStep2();
+                c = ai.MakeStep3();
+            } while (a || b || c);
         }
-        public static void DrawMaze(Maze maze, Robot robot, Robotas robotas)
+        public static void DrawMaze(Maze maze, Robot robot, Robot2 robot2, Robot3 robot3)
         {
             Console.Clear();
             for (int row = 0; row < maze.Height; row++)
@@ -80,8 +147,10 @@ namespace BOT
             
             Console.SetCursorPosition(robot.Location.X, robot.Location.Y);
             Console.Write("1");
-            Console.SetCursorPosition(robotas.Location.X, robotas.Location.Y);
+            Console.SetCursorPosition(robot2.Location.X, robot2.Location.Y);
             Console.Write("2");
+            Console.SetCursorPosition(robot3.Location.X, robot3.Location.Y);
+            Console.Write("3");
         }
     }
  
@@ -115,7 +184,18 @@ namespace BOT
             Location.Y += Direction.Y;
         }
     }
-    class Robotas
+    class Robot2
+    {
+        public Point Location = new Point();
+        public Point Direction = new Point() { X = 1, Y = 0};
+ 
+        public void GoForward()
+        {
+            Location.X += Direction.X;
+            Location.Y += Direction.Y;
+        }
+    }
+    class Robot3
     {
         public Point Location = new Point();
         public Point Direction = new Point() { X = 1, Y = 0};
