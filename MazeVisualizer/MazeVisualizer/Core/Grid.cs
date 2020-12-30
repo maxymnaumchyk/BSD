@@ -219,5 +219,152 @@ namespace MazeGrid
 
             return img;
         }
+        private enum DrawMode
+        {
+            Background, Walls, Path
+        }
+        protected virtual Color? BackgroundColorFor(Cell cell)
+        {
+            return null;
+        }
+        public Image ToPng(Cell start, Cell end, int cellSize = 50)
+        {
+            var width = cellSize * Columns;
+            var height = cellSize * Rows;
+
+            var img = new Bitmap(width, height);
+            using (var g = Graphics.FromImage(img))
+            {
+                g.Clear(Color.White);
+                foreach (var mode in new[] { DrawMode.Background, DrawMode.Walls, DrawMode.Path })
+                {
+
+
+                    foreach (var cell in Cells)
+                    {
+                        var x1 = cell.Column * cellSize;
+                        var y1 = cell.Row * cellSize;
+                        var x2 = (cell.Column + 1) * cellSize;
+                        var y2 = (cell.Row + 1) * cellSize;
+                        var cx = cell.Column * cellSize + cellSize / 2;
+                        var cy = cell.Row * cellSize + cellSize / 2;
+                        var pen = new Pen(Color.Black, 3);
+                        if (mode == DrawMode.Background)
+                        {
+                            var color = BackgroundColorFor(cell);
+                            if (color != null)
+                            {
+                                g.FillRectangle(new SolidBrush(color.GetValueOrDefault()), x1, y1, cellSize, cellSize);
+                            }
+                        }
+                        else if (mode == DrawMode.Walls)
+                        {
+                            if (cell.North == null)
+                            {
+                                g.DrawLine(Pens.Black, x1, y1, x2, y1);
+                            }
+                            if (cell.West == null)
+                            {
+                                g.DrawLine(Pens.Black, x1, y1, x1, y2);
+                            }
+
+                            if (!cell.IsLinked(cell.East))
+                            {
+                                g.DrawLine(Pens.Black, x2, y1, x2, y2);
+                            }
+                            if (!cell.IsLinked(cell.South))
+                            {
+                                g.DrawLine(Pens.Black, x1, y2, x2, y2);
+                            }
+                        }
+                        else if (mode == DrawMode.Path)
+                        {
+                            if (cell == start)
+                            {
+                                g.DrawRectangle(pen, cx - 2, cy - 2, 4, 4);
+                            }
+                            if (cell == end)
+                            {
+                                g.DrawLine(pen, cx - 4, cy - 4, cx + 4, cy + 4);
+                                g.DrawLine(pen, cx + 4, cy - 4, cx - 4, cy + 4);
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            return img;
+        }
+
+        public Image ToPn(Cell start,Cell end,int cellSize = 50)
+        {
+            var width = cellSize * Columns;
+            var height = cellSize * Rows;
+
+            var img = new Bitmap(width, height);
+            using (var g = Graphics.FromImage(img))
+            {
+                g.Clear(Color.White);
+                foreach (var mode in new[] { DrawMode.Walls, DrawMode.Path })
+                {
+
+
+                    foreach (var cell in Cells)
+                    {
+                        var x1 = cell.Column * cellSize;
+                        var y1 = cell.Row * cellSize;
+                        var x2 = (cell.Column + 1) * cellSize;
+                        var y2 = (cell.Row + 1) * cellSize;
+                        var cx = cell.Column * cellSize + cellSize / 2;
+                        var cy = cell.Row * cellSize + cellSize / 2;
+                        var pen = new Pen(Color.Black, 3);
+                        if (mode == DrawMode.Background)
+                        {
+                            var color = BackgroundColorFor(cell);
+                            if (color != null)
+                            {
+                                g.FillRectangle(new SolidBrush(color.GetValueOrDefault()), x1, y1, cellSize, cellSize);
+                            }
+                        }
+                        else if (mode == DrawMode.Walls)
+                        {
+                            if (cell.North == null)
+                            {
+                                g.DrawLine(Pens.Black, x1, y1, x2, y1);
+                            }
+                            if (cell.West == null)
+                            {
+                                g.DrawLine(Pens.Black, x1, y1, x1, y2);
+                            }
+
+                            if (!cell.IsLinked(cell.East))
+                            {
+                                g.DrawLine(Pens.Black, x2, y1, x2, y2);
+                            }
+                            if (!cell.IsLinked(cell.South))
+                            {
+                                g.DrawLine(Pens.Black, x1, y2, x2, y2);
+                            }
+                        }
+                        else if (mode == DrawMode.Path)
+                        {
+                            if (cell == start)
+                            {
+                                g.DrawRectangle(pen, cx - 2, cy - 2, 4, 4);
+                            }
+                            if (cell == end)
+                            {
+                                g.DrawLine(pen, cx - 4, cy - 4, cx + 4, cy + 4);
+                                g.DrawLine(pen, cx + 4, cy - 4, cx - 4, cy + 4);
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            return img;
+        }
     }
 }

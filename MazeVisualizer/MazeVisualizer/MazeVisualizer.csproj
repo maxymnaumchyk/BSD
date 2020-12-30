@@ -47,8 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithms\BinaryTree.cs" />
+    <Compile Include="Algorithms\Sidewinder.cs" />
     <Compile Include="Core\Cell.cs" />
+    <Compile Include="Core\ColorExtensions.cs" />
+    <Compile Include="Core\ColoredGrid.cs" />
     <Compile Include="Core\Distances.cs" />
+    <Compile Include="Core\DistancesGrid.cs" />
     <Compile Include="Core\Grid.cs" />
     <Compile Include="Core\Utilities.cs" />
     <Compile Include="Form1.cs">
