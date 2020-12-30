@@ -1,0 +1,47 @@
+C:\Users\Олена\source\repos\Maze BSD\MazeVisualizer\MazeVisualizer\obj\Debug\MazeVisualizer.csprojAssemblyReference.cache
+C:\Users\Олена\source\repos\Maze BSD\MazeVisualizer\MazeVisualizer\obj\Debug\MazeVisualizer.Form1.resources
+C:\Users\Олена\source\repos\Maze BSD\MazeVisualizer\MazeVisualizer\obj\Debug\MazeVisualizer.Properties.Resources.resources
+C:\Users\Олена\source\repos\Maze BSD\MazeVisualizer\MazeVisualizer\obj\Debug\MazeVisualizer.csproj.GenerateResource.cache
+C:\Users\Олена\source\repos\Maze BSD\MazeVisualizer\MazeVisualizer\bin\Debug\MazeVisualizer.exe.config
+C:\Users\Олена\source\repos\Maze BSD\MazeVisualizer\MazeVisualizer\bin\Debug\MazeVisualizer.exe
+C:\Users\Олена\source\repos\Maze BSD\MazeVisualizer\MazeVisualizer\bin\Debug\MazeVisualizer.pdb
+C:\Users\Олена\source\repos\Maze BSD\MazeVisualizer\MazeVisualizer\obj\Debug\MazeVisualizer.exe
+C:\Users\Олена\source\repos\Maze BSD\MazeVisualizer\MazeVisualizer\obj\Debug\MazeVisualizer.pdb
+C:\Users\nikit\Documents\LOLi_tex\BSD-main\MazeVisualizer\MazeVisualizer\bin\Debug\MazeVisualizer.exe.config
+C:\Users\nikit\Documents\LOLi_tex\BSD-main\MazeVisualizer\MazeVisualizer\bin\Debug\MazeVisualizer.exe
+C:\Users\nikit\Documents\LOLi_tex\BSD-main\MazeVisualizer\MazeVisualizer\bin\Debug\MazeVisualizer.pdb
+C:\Users\nikit\Documents\LOLi_tex\BSD-main\MazeVisualizer\MazeVisualizer\obj\Debug\MazeVisualizer.csprojAssemblyReference.cache
+C:\Users\nikit\Documents\LOLi_tex\BSD-main\MazeVisualizer\MazeVisualizer\obj\Debug\MazeVisualizer.Form1.resources
+C:\Users\nikit\Documents\LOLi_tex\BSD-main\MazeVisualizer\MazeVisualizer\obj\Debug\MazeVisualizer.Properties.Resources.resources
+C:\Users\nikit\Documents\LOLi_tex\BSD-main\MazeVisualizer\MazeVisualizer\obj\Debug\MazeVisualizer.csproj.GenerateResource.cache
+C:\Users\nikit\Documents\LOLi_tex\BSD-main\MazeVisualizer\MazeVisualizer\obj\Debug\MazeVisualizer.csproj.CoreCompileInputs.cache
+C:\Users\nikit\Documents\LOLi_tex\BSD-main\MazeVisualizer\MazeVisualizer\obj\Debug\MazeVisualizer.exe
+C:\Users\nikit\Documents\LOLi_tex\BSD-main\MazeVisualizer\MazeVisualizer\obj\Debug\MazeVisualizer.pdb
+C:\Users\Олена\source\repos\Maze BSD\MazeVisualizerTest\MazeVisualizer\bin\Debug\MazeVisualizer.exe.config
+C:\Users\Олена\source\repos\Maze BSD\MazeVisualizerTest\MazeVisualizer\bin\Debug\MazeVisualizer.exe
+C:\Users\Олена\source\repos\Maze BSD\MazeVisualizerTest\MazeVisualizer\bin\Debug\MazeVisualizer.pdb
+C:\Users\Олена\source\repos\Maze BSD\MazeVisualizerTest\MazeVisualizer\obj\Debug\MazeVisualizer.csprojAssemblyReference.cache
+C:\Users\Олена\source\repos\Maze BSD\MazeVisualizerTest\MazeVisualizer\obj\Debug\MazeVisualizer.Form1.resources
+C:\Users\Олена\source\repos\Maze BSD\MazeVisualizerTest\MazeVisualizer\obj\Debug\MazeVisualizer.Properties.Resources.resources
+C:\Users\Олена\source\repos\Maze BSD\MazeVisualizerTest\MazeVisualizer\obj\Debug\MazeVisualizer.csproj.GenerateResource.cache
+C:\Users\Олена\source\repos\Maze BSD\MazeVisualizerTest\MazeVisualizer\obj\Debug\MazeVisualizer.exe
+C:\Users\Олена\source\repos\Maze BSD\MazeVisualizerTest\MazeVisualizer\obj\Debug\MazeVisualizer.pdb
+C:\Users\nikit\Documents\LOLi_tex\BSD-main\MazeTest\MazeVisualizerTest\MazeVisualizer\bin\Debug\MazeVisualizer.exe.config
+C:\Users\nikit\Documents\LOLi_tex\BSD-main\MazeTest\MazeVisualizerTest\MazeVisualizer\bin\Debug\MazeVisualizer.exe
+C:\Users\nikit\Documents\LOLi_tex\BSD-main\MazeTest\MazeVisualizerTest\MazeVisualizer\bin\Debug\MazeVisualizer.pdb
+C:\Users\nikit\Documents\LOLi_tex\BSD-main\MazeTest\MazeVisualizerTest\MazeVisualizer\obj\Debug\MazeVisualizer.csprojAssemblyReference.cache
+C:\Users\nikit\Documents\LOLi_tex\BSD-main\MazeTest\MazeVisualizerTest\MazeVisualizer\obj\Debug\MazeVisualizer.Form1.resources
+C:\Users\nikit\Documents\LOLi_tex\BSD-main\MazeTest\MazeVisualizerTest\MazeVisualizer\obj\Debug\MazeVisualizer.Properties.Resources.resources
+C:\Users\nikit\Documents\LOLi_tex\BSD-main\MazeTest\MazeVisualizerTest\MazeVisualizer\obj\Debug\MazeVisualizer.csproj.GenerateResource.cache
+C:\Users\nikit\Documents\LOLi_tex\BSD-main\MazeTest\MazeVisualizerTest\MazeVisualizer\obj\Debug\MazeVisualizer.csproj.CoreCompileInputs.cache
+C:\Users\nikit\Documents\LOLi_tex\BSD-main\MazeTest\MazeVisualizerTest\MazeVisualizer\obj\Debug\MazeVisualizer.exe
+C:\Users\nikit\Documents\LOLi_tex\BSD-main\MazeTest\MazeVisualizerTest\MazeVisualizer\obj\Debug\MazeVisualizer.pdb
+C:\Users\Олена\source\repos\Maze BSD\Maze\MazeVisualizer\bin\Debug\MazeVisualizer.exe.config
+C:\Users\Олена\source\repos\Maze BSD\Maze\MazeVisualizer\bin\Debug\MazeVisualizer.exe
+C:\Users\Олена\source\repos\Maze BSD\Maze\MazeVisualizer\bin\Debug\MazeVisualizer.pdb
+C:\Users\Олена\source\repos\Maze BSD\Maze\MazeVisualizer\obj\Debug\MazeVisualizer.csprojAssemblyReference.cache
+C:\Users\Олена\source\repos\Maze BSD\Maze\MazeVisualizer\obj\Debug\MazeVisualizer.Form1.resources
+C:\Users\Олена\source\repos\Maze BSD\Maze\MazeVisualizer\obj\Debug\MazeVisualizer.Properties.Resources.resources
+C:\Users\Олена\source\repos\Maze BSD\Maze\MazeVisualizer\obj\Debug\MazeVisualizer.csproj.GenerateResource.cache
+C:\Users\Олена\source\repos\Maze BSD\Maze\MazeVisualizer\obj\Debug\MazeVisualizer.exe
+C:\Users\Олена\source\repos\Maze BSD\Maze\MazeVisualizer\obj\Debug\MazeVisualizer.pdb
