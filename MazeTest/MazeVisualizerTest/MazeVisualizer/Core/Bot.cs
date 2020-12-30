@@ -187,7 +187,7 @@ namespace BOT
                 c = ai.MakeStep3();
             } while (a || b || c);
         }
-        public Image ToImg(Maze maze = null, Robot robot = null, Robot robot2 = null, Robot robot3 = null, int cellSize = 50)
+        public Image ToImg(Maze maze, Robot robot, Robot robot2, Robot robot3, int cellSize = 50)
         {
             var width = cellSize * maze.Width;
             var height = cellSize * maze.Height;

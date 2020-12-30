@@ -123,17 +123,17 @@ namespace MazeVisualizer
                 var robot = new Robot { Location = new PointBot { X = 1, Y = 1 } };
                 var robot2 = new Robot { Location = new PointBot { X = 1, Y = 1 } };
                 var robot3 = new Robot { Location = new PointBot { X = 1, Y = 1 } };
-                var maze = Maze.Load(@"C:\Users\nikit\Documents\LOLi_tex\1.txt");
+                var maze = Maze.Load(@"C:/2.txt");
                 var ai = new AI { Robot2 = robot2, Maze = maze, Robot = robot, Robot3 = robot3 };
                 var a = true;
                 var b = true;
                 var c = true;
                 do
                 {
+                    pB.Image = ai.ToImg(maze, robot, robot2, robot3);
                     a = ai.MakeStep();
                     b = ai.MakeStep2();
                     c = ai.MakeStep3();
-                    pB.Image = ai.ToImg(maze, robot, robot2, robot3);
                 } while (a || b || c);
             }
         }
